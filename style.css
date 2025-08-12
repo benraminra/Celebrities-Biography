@@ -84,7 +84,6 @@ body {
   cursor: pointer;
 }
 
-/* Tablets (portrait and up) */
 @media (min-width: 600px) {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -107,7 +106,6 @@ body {
   }
 }
 
-/* Desktops (1024px and up) */
 @media (min-width: 1024px) {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -115,5 +113,27 @@ body {
 
   .main-title {
     font-size: 2.5rem;
+  }
+}
+.video-container {
+  background: #ffa64d;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  margin: 40px auto;
+}
+
+.video-container iframe {
+  width: 560px;
+  height: 315px;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .video-container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
   }
 }
